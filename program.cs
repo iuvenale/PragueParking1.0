@@ -371,7 +371,7 @@ namespace MyCode
 
 							parkingGarage[index] = null;
 
-                            Console.WriteLine("The MC is moved from {0} to spot {1}", index +1, newParkingSpot);
+                            Console.WriteLine("The MC is moved from {0} to spot {1}", index +1, newParkingSpot +1);
 							Console.ReadKey();
 						}
 						else
