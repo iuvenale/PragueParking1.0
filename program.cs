@@ -6,11 +6,11 @@ namespace MyCode
 {
 	class Program
 	{
-		static string[] parkingGarage = new string[100]; // denna rad fick vi från uppgiften vid "tips" 
+		static string[] parkingGarage = new string[100]; 
 
 		static void Main(string[] args)
 		{
-			bool run = true; //för att snurra ska fungera måste vi veta att den är sann. 
+			bool run = true; 
 			while (run)
 			{
 				// Display meny
@@ -174,7 +174,7 @@ namespace MyCode
 				Console.ReadKey();
 			}
 		}
-		//park a mc Park MC
+		//park a mc 
 
 		public static bool ParkMc(out int emptyIndex)
 		{
@@ -209,7 +209,7 @@ namespace MyCode
 			return "Error";
 		}
 
-		// Method 10: case 3 from switch
+		// Method 10: find index
 
 		static int FindIndex(string userInput, out int index)
 		{
@@ -229,7 +229,7 @@ namespace MyCode
 			return index;
 		}
 
-		// Method X: Search for a vehicle
+		// Method: Search for a vehicle from case 3 in switch
 
 		static void SearchVehicle()
 		{
@@ -250,7 +250,7 @@ namespace MyCode
 
 		}
 
-		// Method Y: search for regNum
+		// Method: search for regNum
 		static bool SearchRegNum(string userInput)
 		{
 			for (int i = 0; i < parkingGarage.Length; i++)
@@ -271,7 +271,7 @@ namespace MyCode
 			return false;
 		}
 
-		// method for search reg num MC
+		// Method: for search reg num MC
 		static bool SearchRegMC(string userInput)
 		{
 			for (int i = 0; i < parkingGarage.Length; i++)
@@ -288,7 +288,7 @@ namespace MyCode
 			return false;
 		}
 
-		// Method J: choose what type of vehicle to move
+		// Method: choose what type of vehicle to move
 
 		public static void MoveVehicle()
 		{
@@ -314,7 +314,7 @@ namespace MyCode
 
 		}
 
-		// Method XX: method for moving a car
+		// Method: method for moving a car
 
 		public static void MoveCar()//Kolla rad 303
 		{
@@ -347,7 +347,7 @@ namespace MyCode
 			}
 		}
 
-		// Method xxx: for moving a mc
+		// Method: for moving a mc
 
 		public static void MoveMc()
 		{
@@ -505,7 +505,7 @@ namespace MyCode
 
 
 		}
-		// method aa: för att kolla hela listan
+		// Method: för att kolla hela listan
 		static void SeeVehicles()
 		{
 			foreach (var vehicle in parkingGarage)
@@ -610,7 +610,6 @@ namespace MyCode
 		//FEL att fixa.
 		//Kan inte se plats för mc om det bara står en mc parkerad
 		// Menyn blir röd efter val 6
-		// Kan inte söka efter mc
 		// Byta plats på bil/mc funkar inte
 		// Har vi dubbla metoder?
 
