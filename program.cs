@@ -66,7 +66,7 @@ namespace MyCode
 
 		}
 
-		// Method 1: From case 1 from switch
+		// Method: Park a car (from case 1 from switch)
 
 		public static void CarEnterGarage()
 		{
@@ -99,7 +99,7 @@ namespace MyCode
 			}
 		}
 
-		// Method 2: Is registration number valid
+		// Method: Is registration number valid
 
 		public static bool IsRegistrationNumberValid(string regNum)
 		{
@@ -110,39 +110,7 @@ namespace MyCode
 			return (false);
 		}
 
-		// Method 3: find an empty parking spot for car (= empty index in array)
-
-		public static int FindEmptySpace() // vet inte om jag ska använda int eller void här? blir inte röd när jag använder void
-		{
-			for (int i = 0; i < parkingGarage.Length; i++)
-			{
-				if (parkingGarage[i] == null)
-				{
-					return i;
-				}
-			}
-
-			return -1;
-
-		}
-
-		// Method 4: Park a car
-
-		public static bool ParkCar(out int emptyIndex)
-		{
-			emptyIndex = FindEmptySpace();
-			if (emptyIndex >= 0)
-			{
-				return true;
-			}
-			else
-			{
-				Console.WriteLine("The parking is full (PARK CAR).");
-				return false;
-			}
-		}
-
-		// Mehtod 5: from case 2 in switch
+		// Mehtod: Park a MC (from case 2 in switch)
 
 		public static void McEnterGarage()
 		{
@@ -174,23 +142,8 @@ namespace MyCode
 				Console.ReadKey();
 			}
 		}
-		//park a mc 
 
-		public static bool ParkMc(out int emptyIndex)
-		{
-			emptyIndex = FindEmptySpace();
-			if (emptyIndex >= 0)
-			{
-				return true;
-			}
-			else
-			{
-				Console.WriteLine("The parking is full (PARK MC).");
-				return false;
-			}
-		}
-
-		// Method 7: Identify vehicle type based on registration number
+		// Method: Identify vehicle type based on registration number
 		public static string IdentifyVehicleType(string RegNum)
 		{
 			int parkingSpot = Array.FindIndex(parkingGarage, row => row.Contains(RegNum));
