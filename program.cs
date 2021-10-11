@@ -70,10 +70,10 @@ namespace MyCode
 
 		public static void CarEnterGarage()
 		{
-			Console.WriteLine("Please enter the registration number (eg. abc123): "); //Kan ändra här till "to park a car"
+			Console.WriteLine("Please enter the registration number (eg. abc123): "); 
 			string regNum = Console.ReadLine().ToUpper();
 
-			if (IsRegistrationNumberValid(regNum) && !SearchRegNum(regNum)) // Har "regNum här för att det är specifikt till en bil
+			if (IsRegistrationNumberValid(regNum) && !SearchRegNum(regNum)) 
 
 			{
 				int myEmptySpot = IsNull();
@@ -114,9 +114,9 @@ namespace MyCode
 
 		public static void McEnterGarage()
 		{
-			Console.WriteLine("Please enter the registration number (eg. abc123): "); //kan ändra här till "to park a motorcycle"
+			Console.WriteLine("Please enter the registration number (eg. abc123): "); 
 			string mcRegNum = Console.ReadLine().ToUpper();
-			if (IsRegistrationNumberValid(mcRegNum) && !SearchRegNum(mcRegNum)) // Har mcRegNum här för att det ska vara specifikt för en MC.
+			if (IsRegistrationNumberValid(mcRegNum) && !SearchRegNum(mcRegNum)) 
 			{
 				if (HasMC() >= 0)
 				{
