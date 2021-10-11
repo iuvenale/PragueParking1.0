@@ -457,7 +457,7 @@ namespace MyCode
 
 
 
-		// Method 13: from case 5 in switch Remove vehicle from parking
+		// Method: from case 5 in switch Remove vehicle from parking
 
 		public static void RemoveVehicle()
 		{
@@ -489,22 +489,26 @@ namespace MyCode
 							parkingGarage[index] = mcSplit[0];
 						}
 						Console.WriteLine("We have now removed the vehicle {0}", vehicleToRemove);
+						Console.ReadKey();
 					}
 					else
 					{
 						parkingGarage[index] = null;
 					}
 					Console.WriteLine("We have now removed the vehicle {0}", vehicleToRemove);
+					Console.ReadKey();
 				}
 
 			}
 			else
 			{
 				Console.WriteLine("Sorry, vehicle is not here.");
+				Console.ReadKey();
 			}
 
 
 		}
+		
 		// Method: för att kolla hela listan
 		static void SeeVehicles()
 		{
@@ -525,52 +529,6 @@ namespace MyCode
 			}
 			Console.ReadKey();
 
-
-
-
-			/*Console.Clear();
-			Console.WriteLine("Prague Parking");
-
-			const int cols = 6;
-			int n = 1;
-			for (int i = 0; i < parkingGarage.Length; i++)
-			{
-				Console.ResetColor();
-				if (n >= cols && n % cols == 0)
-				{
-					Console.WriteLine();
-					n = 1;
-				}
-				if (parkingGarage[i] == null)
-				{
-					Console.ForegroundColor = ConsoleColor.Red;
-					Console.Write(i + 1 + ": Empty \t");
-					n++;
-
-				}
-				else if (parkingGarage[i].Contains("CAR:"))
-				{
-					Console.ForegroundColor = ConsoleColor.Green;
-					Console.Write(i + 1 + ": " + parkingGarage[i] + "\t");
-					n++;
-				}
-				else if (parkingGarage[i].Contains("MC:") && parkingGarage[i].Length <= 10)
-				{
-					{
-						Console.ForegroundColor = ConsoleColor.Yellow;
-						Console.Write(i + 1 + ": " + parkingGarage[i] + "\t");
-						n++;
-					}
-				}
-				else if (parkingGarage[i].Contains(" | "))
-				{
-					Console.ForegroundColor = ConsoleColor.Green;
-					Console.Write(i + 1 + ": " + parkingGarage[i] + "\t");
-					n++;
-				}
-			}
-			Console.ReadKey();*/
-
 		}
 		static int HasMC()
 		{
@@ -582,7 +540,9 @@ namespace MyCode
 				}
 			}
 			return -1;
-		}//Checks the index of first SOLO MC
+		}
+		
+		//Method: checks the index of first SOLO MC
 
 		static int IsNull()
 		{
@@ -594,7 +554,9 @@ namespace MyCode
 				}
 			}
 			return -1;
-		}//Checks the index of first NULL... should be bool and out index.
+		}
+		
+		//Methof: Checks the index of first NULL... should be bool and out index.
 		static bool IsFull(int userInput)
 		{
 			if (parkingGarage[userInput] != null)
@@ -606,13 +568,6 @@ namespace MyCode
 			}
 			return false;
 		}
-
-		//FEL att fixa.
-		//Kan inte se plats för mc om det bara står en mc parkerad
-		// Menyn blir röd efter val 6
-		// Byta plats på bil/mc funkar inte
-		// Har vi dubbla metoder?
-
 
 	}
 }
