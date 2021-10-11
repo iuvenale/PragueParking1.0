@@ -162,7 +162,7 @@ namespace MyCode
 			return "Error";
 		}
 
-		// Method 10: find index
+		// Method: Find empty index in array
 
 		static int FindIndex(string userInput, out int index)
 		{
@@ -182,7 +182,7 @@ namespace MyCode
 			return index;
 		}
 
-		// Method: Search for a vehicle from case 3 in switch
+		// Method: Search for a vehicle (from case 3 in switch)
 
 		static void SearchVehicle()
 		{
@@ -203,7 +203,7 @@ namespace MyCode
 
 		}
 
-		// Method: search for regNum
+		// Method: search for regNum (car)
 		static bool SearchRegNum(string userInput)
 		{
 			for (int i = 0; i < parkingGarage.Length; i++)
@@ -224,7 +224,7 @@ namespace MyCode
 			return false;
 		}
 
-		// Method: for search reg num MC
+		// Method: for search regNum (MC)
 		static bool SearchRegMC(string userInput)
 		{
 			for (int i = 0; i < parkingGarage.Length; i++)
@@ -241,7 +241,7 @@ namespace MyCode
 			return false;
 		}
 
-		// Method: choose what type of vehicle to move
+		// Method: choose what type of vehicle to move (from case 4 in switch)
 
 		public static void MoveVehicle()
 		{
@@ -267,7 +267,7 @@ namespace MyCode
 
 		}
 
-		// Method: method for moving a car
+		// Method: moving a car
 
 		public static void MoveCar()//Kolla rad 303
 		{
@@ -300,7 +300,7 @@ namespace MyCode
 			}
 		}
 
-		// Method: for moving a mc
+		// Method: moving a mc
 
 		public static void MoveMc()
 		{
@@ -410,7 +410,7 @@ namespace MyCode
 
 
 
-		// Method: from case 5 in switch Remove vehicle from parking
+		// Method: Remove vehicle from parking (from case 5 in switch)
 
 		public static void RemoveVehicle()
 		{
@@ -462,7 +462,7 @@ namespace MyCode
 
 		}
 		
-		// Method: för att kolla hela listan
+		// Method: Overview of all parked vehicles
 		static void SeeVehicles()
 		{
 			foreach (var vehicle in parkingGarage)
@@ -509,7 +509,7 @@ namespace MyCode
 			return -1;
 		}
 		
-		//Methof: Checks the index of first NULL... should be bool and out index.
+		//Methof: Checks the index of first NULL
 		static bool IsFull(int userInput)
 		{
 			if (parkingGarage[userInput] != null)
